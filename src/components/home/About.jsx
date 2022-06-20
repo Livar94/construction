@@ -13,6 +13,7 @@ export default function About() {
             <AboutLeft>
                 <h2>About</h2>
                 <p>CI Landscape and Excavation is a family owned business with over 25 years of experience. <br /> We specialize in work involving all types of excavation and landscape, including big or small projects. <br />Our main priority is to provide our customers with high quality work and satisfaction.</p>
+                <Button>Read more</Button>
             </AboutLeft>
             <AboutRight>
                 <AboutImage src={aboutImg} alt="" />
@@ -20,18 +21,17 @@ export default function About() {
             
 
         </AboutContent>
-        <Button className='container'>Read more</Button>
+        
     </Header>
   )
 }
 
 const Header = styled.div`
     margin: 1em;
-    background-color: #ffee00;
-    border-radius: 2em;
-    padding: 2em;
-    
-    
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;   
+    border-radius: 1em;
+    padding: 3em;
+    margin: 5em;
 `;
 
 const AboutContent = styled.div`
@@ -40,10 +40,16 @@ const AboutContent = styled.div`
     gap: 1em; */
     display: flex;
     justify-content: center;
+    padding: 1em;
+    align-items: center;
 
 `;
 
 const AboutLeft = styled.div`
+    > p {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 
 `;
 
