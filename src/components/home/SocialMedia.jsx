@@ -12,7 +12,7 @@ export default function SocialMedia() {
     <SMContainer>
         <SMContent className="container">
             {/*  */}
-            <SMContentItem>
+            <SMContentItem href='https://www.instagram.com/landscapeexcavation/'>
                 <SMContentItemImg>
                     <RiInstagramFill />
                 </SMContentItemImg>
@@ -21,7 +21,7 @@ export default function SocialMedia() {
                 </SMContentItemText>
             </SMContentItem>
             {/*  */}
-            <SMContentItem>
+            <SMContentItem href='tel:(416)-918-5324'>
                 <SMContentItemImg>
                     <MdPhoneEnabled />
                 </SMContentItemImg>
@@ -30,7 +30,7 @@ export default function SocialMedia() {
                 </SMContentItemText>
             </SMContentItem>
             {/*  */}
-            <SMContentItem>
+            <SMContentItem href='mailto:cilandscapeexcavation@gmail.com'>
                 <SMContentItemImg>
                     <MdEmail />
                 </SMContentItemImg>
@@ -51,12 +51,14 @@ const SMContent = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
+
 `
-const SMContentItem = styled.div`
+const SMContentItem = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white !important;
 `
 const SMContentItemImg = styled.div`
     svg {
