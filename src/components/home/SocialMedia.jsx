@@ -51,7 +51,10 @@ const SMContent = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
+    @media only screen and (max-width: 768px) {
 
+        grid-template-columns: 1fr;
+    }
 `
 const SMContentItem = styled.a`
     display: flex;

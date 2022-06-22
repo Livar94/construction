@@ -31,7 +31,11 @@ const Header = styled.div`
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;   
     border-radius: 1em;
     padding: 3em;
-    margin: 5em;
+    
+    @media only screen and (min-width: 768px) {
+
+        margin: 5em;
+    }
 `;
 
 const AboutContent = styled.div`
@@ -42,7 +46,11 @@ const AboutContent = styled.div`
     justify-content: center;
     padding: 1em;
     align-items: center;
-
+    
+    @media only screen and (max-width: 768px) {
+        gap: 3em;
+        flex-direction: column;
+    }
 `;
 
 const AboutLeft = styled.div`

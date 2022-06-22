@@ -53,7 +53,6 @@ const ServicesHeader = styled.div`
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;
   border-radius: 1em;
     padding: 3em;
-    margin: 5em;
 
   
   > h1 {
@@ -61,6 +60,11 @@ const ServicesHeader = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
+  }
+
+    @media only screen and (min-width: 768px) {
+
+  margin: 5em;
   }
 `;
 
@@ -77,6 +81,10 @@ const ServicesContent = styled.div`
     border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 100px 36px -28px inset;
     cursor: pointer;
+  }
+  @media only screen and (max-width: 768px) {
+
+    grid-template-columns: 1fr;
   }
 `;
 

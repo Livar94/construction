@@ -34,9 +34,11 @@ const Email = () => {
 export default Email;
 
 const Form = styled.form`
-    display: flex;
-    justify-content:center ;
-    margin: 3rem;
-    
+  display: flex;
+  justify-content:center ;
+  margin: 3rem;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 

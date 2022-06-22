@@ -54,6 +54,8 @@ const HeroContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    
 `;
 
 /* const HeroImg = styled.img`
@@ -144,6 +146,17 @@ const HeroContentText = styled.div`
             letter-spacing: .2em;
             text-decoration: underline;
             text-decoration-style: wavy;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        > h1 {
+            font-size: 3rem;
+        }
+
+        > p {
+            font-size: 1rem;
         }
     }
    
