@@ -2,8 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../../assets/images/logo.png'
+import { IoIosMenu } from 'react-icons/io';
+import { useSidebar } from '../../context/useSidebar'
 
 export default function Navbar() {
+  const { setIsOpen } = useSidebar();
+
   return (
     <NavbarHeader>
       <NavbarContent className="container">
@@ -17,6 +21,12 @@ export default function Navbar() {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </NavLinks>
+        
+        <MenuBtn onClick={() => setIsOpen(prev => !prev)}>
+          <IoIosMenu />
+        </MenuBtn>
+
+        
 
 
 
@@ -25,12 +35,26 @@ export default function Navbar() {
   )
 }
 
+
+const MenuBtn = styled.button`
+  background: transparent;
+  padding: 0;
+  border: 0;
+  font-size: 2.5rem;
+  color: white;
+  @media only screen and (min-width: 768px) {
+
+    display: none;
+  }
+`
+
 const NavbarHeader = styled.header`
   padding: 1em 0;
 `
 
 const NavbarContent = styled.nav`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
 `
@@ -55,6 +79,11 @@ const NavLinks = styled.ul`
     color: white !important;
     text-decoration: none;
   }
+
+  @media only screen and (max-width: 768px) {
+
+    display: none;
+}
 `
 
 

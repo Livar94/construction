@@ -35,6 +35,7 @@ export default function Footer() {
 const FooterContainer = styled.div`
     background: #0a0a0a url(${Dirt}) center center repeat;
     padding: 3em 0;
+   
 `
 
 const FooterContent = styled.div`
@@ -60,6 +61,10 @@ const FooterLinksContainer = styled.div`
   gap: 1em;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    gap: 1.5em;
+    flex-direction: column;
+  }
 `
 
 const FooterLinksIntro = styled.div`

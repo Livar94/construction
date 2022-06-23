@@ -52,7 +52,7 @@ const SMContent = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
     @media only screen and (max-width: 768px) {
-
+        gap: 4em;
         grid-template-columns: 1fr;
     }
 `

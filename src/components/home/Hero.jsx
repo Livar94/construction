@@ -6,6 +6,11 @@ import Typewriter from 'typewriter-effect';
 import {ChevronDoubleDownIcon} from '@heroicons/react/outline'
 
 export default function Hero() {
+
+    const test = () => {
+        window.scrollBy(0, window.innerHeight)
+    }
+
   return (
     <HeroContainer>
         <HeroNavbarContainer>
@@ -35,7 +40,7 @@ export default function Hero() {
         </HeroContent>
 
         <HeroFooter>
-            <HeroIconContainer>
+            <HeroIconContainer onClick={test}>
                 <ChevronDoubleDownIcon />
             </HeroIconContainer>
             
@@ -95,7 +100,7 @@ const HeroFreeEstimate = styled.button`
 `
 
 const HeroIconContainer = styled.div`
-
+    cursor: pointer;
    > svg {
     
         color: white;
@@ -123,8 +128,10 @@ const HeroContentText = styled.div`
     width: 100%;
 
     > h1 {
+        margin: 1rem 0;
         font-size: 5rem;
         min-width: 100%;
+        line-height: 1em;
     }
 
     > p {

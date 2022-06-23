@@ -53,7 +53,7 @@ const ServicesHeader = styled.div`
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;
   border-radius: 1em;
     padding: 3em;
-
+  margin: 1em;
   
   > h1 {
 
