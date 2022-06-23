@@ -9,7 +9,7 @@ import { IoIosClose } from 'react-icons/io';
 function Layout({ children }) {
   const { isOpen, setIsOpen } = useSidebar();
   return (
-    <div>
+    <LayoutContainer>
       {isOpen && <MenuContainer>
         <Menu isOpen={isOpen} right styles={{
           bmMenu: {
@@ -39,7 +39,7 @@ function Layout({ children }) {
       {/* <Navbar /> */}
         {children}
       <Footer />
-    </div>
+    </LayoutContainer>
   )
 }
 
@@ -57,4 +57,9 @@ const MenuBtn = styled.button`
 const MenuContainer = styled.div`
 /*   left: 0;
   position: absolute; */
+`
+
+const LayoutContainer = styled.div`
+  width: 100vw;
+  overflow: hidden;
 `

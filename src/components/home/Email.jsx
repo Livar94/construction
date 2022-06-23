@@ -47,8 +47,8 @@ const Header = styled.div`
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
     border-radius: 1em;
     padding: 3em;
-
-
+  position: relative;
+    overflow: hidden;
     @media only screen and (min-width: 768px) {
 
 margin: 5em;
