@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import aboutImg from '../../assets/images/image0.jpeg'
-
+import Heel from '../../assets/images/heeel.png'
+import Circle from '../../assets/images/circle.png'
 
 export default function About() {
   return (
+    <Container>
     <Header>
-        
-
         <AboutContent className="container">
             
             <AboutLeft>
@@ -19,16 +19,23 @@ export default function About() {
                 <AboutImage src={aboutImg} alt="" />
             </AboutRight>
             
-
+            <PatternImg src={Heel} />
         </AboutContent>
-        
     </Header>
+
+    <PatternImgTwo src={Circle} />
+
+    </Container>
   )
 }
 
+const Container = styled.div`
+    position: relative;
+`
+
 const Header = styled.div`
     margin: 1em;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;   
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
     border-radius: 1em;
     padding: 3em;
     
@@ -36,12 +43,35 @@ const Header = styled.div`
 
         margin: 5em;
     }
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 9998 !important;
 `;
+
+const PatternImg = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: .2;
+`
+
+const PatternImgTwo = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -250px;
+    z-index: -1 !important;
+    opacity: .1;
+    width: 1000px;
+`
 
 const AboutContent = styled.div`
     /* display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em; */
+    
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -58,6 +88,9 @@ const AboutLeft = styled.div`
         margin-top: 2em;
         margin-bottom: 2em;
     }
+
+    position: relative;
+    z-index: 2;
 
 `;
 

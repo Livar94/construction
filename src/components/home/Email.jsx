@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
+import Dots from '../../assets/images/dots.png'
 
 const Email = () => {
   const form = useRef();
@@ -32,6 +33,7 @@ const Email = () => {
           <input type="submit" className='btn' value="Send" required />
         </Form>
       </FormEmail>
+      <PatternImg src={Dots} />
     </Header>
     
     
@@ -42,7 +44,7 @@ export default Email;
 
 const Header = styled.div`
     margin: 1em;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;   
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
     border-radius: 1em;
     padding: 3em;
 
@@ -50,8 +52,18 @@ const Header = styled.div`
     @media only screen and (min-width: 768px) {
 
 margin: 5em;
+
+position: relative;
 }
 `;
+
+const PatternImg = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: .05;
+`
 
 const FormInfo = styled.div`
   display: flex;
@@ -108,6 +120,6 @@ const Form = styled.form`
   }
 `;
 const FormEmail = styled.div`
-    
-
+    position: relative;
+    z-index: 99;
 `;

@@ -7,6 +7,7 @@ import DriveWayImg from '../../assets/images/images.jpg'
 import ConcreteImg from '../../assets/images/DV07X9TXkAEBydj.jpg'
 import InterLockImg from '../../assets/images/images (1).jpg'
 import SodImg from '../../assets/images/rolling-out-sod.jpg'
+import Heel from '../../assets/images/heeel.png'
 
 
 export default function Services() {
@@ -44,19 +45,22 @@ export default function Services() {
           <h3>sod installation and removal</h3>
           <p>hello world</p>
         </SodInstallationRemoval>
+
+        <PatternImg src={Heel} />
       </ServicesContent>
     </ServicesHeader>
   )
 }
 
 const ServicesHeader = styled.div`
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 1em;
   padding: 3em;
   margin: 1em;
   
   > h1 {
-
+    position: relative;
+    z-index: 99;
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
@@ -66,13 +70,30 @@ const ServicesHeader = styled.div`
 
   margin: 5em;
   }
+
+  overflow: hidden;
+    position: relative;
+    background-color: white;
+    z-index: 9998 !important;
 `;
+
+const PatternImg = styled.img`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    opacity: .3;
+`
 
 const ServicesContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
   > div {
+    position: relative;
+    z-index: 99;
     padding: 3em 1em;
     display: flex;
     flex-direction: column;
