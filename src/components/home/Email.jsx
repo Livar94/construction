@@ -17,40 +17,75 @@ const Email = () => {
   };
 
   return (
-    <Form ref={form} onSubmit={sendEmail}>
-      <label></label>
-      <input type="text" placeholder='First Name' name="user_name" required />
-      <input type="text" placeholder='Last Name' name="user_name" required />
-      <label></label>
-      <input type="email" placeholder='Email' name="user_email" required />
-      <label></label>
-      <input type="tel" name="user_number" placeholder='Phone Number' required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
-      <label></label>
-      <textarea name="message" required placeholder='Message'/>
-      <input type="submit" className='btn' value="Send" required />
-      {/* <Button></Button> */}
-      
-    </Form>
+    <Header>
+      <FormEmail className='container'>
+        <FormInfo>
+          <h2>Contact us</h2>
+          <p>Message us for more information about services or free estimation.</p>
+        </FormInfo>
+        <Form ref={form} onSubmit={sendEmail}>
+          <input type="text" placeholder='First Name' name="user_name" required />
+          <input type="text" placeholder='Last Name' name="user_name" required />
+          <input type="email" placeholder='Email' name="user_email" required />
+          <input type="tel" name="user_number" placeholder='Phone Number' required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
+          <textarea name="message" required placeholder='Message...'/>
+          <input type="submit" className='btn' value="Send" required />
+        </Form>
+      </FormEmail>
+    </Header>
+    
+    
   );
 };
 
 export default Email;
 
+const Header = styled.div`
+    margin: 1em;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 100px;   
+    border-radius: 1em;
+    padding: 3em;
+
+
+    @media only screen and (min-width: 768px) {
+
+margin: 5em;
+}
+`;
+
+const FormInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
+`;
+
 const Form = styled.form`
   /* display: flex;
   justify-content:center ; */
-  > input {
-    width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  > input, textarea {
+      max-width: 500px;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 2em;
+
+    
   :hover{
         background-color: lightgray;
         color: black;
     }
   
+  }
+
+  > textarea {
+    min-height: 150px;
   }
 
   > .btn {
@@ -62,29 +97,17 @@ const Form = styled.form`
         color: black;
      }
   }
+
+  
+
+
   
   
   @media only screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
+const FormEmail = styled.div`
+    
 
-// // const Button = styled.button`
-// //   padding: 0.5em 3em;
-// //   border: none;
-// //   border-radius: 2em;
-// //   background-color: black;
-// //   :hover{
-// //         background-color: lightgray;
-// //         color: black;
-// //     }
-// //   cursor: pointer;
-// //   > input {
-// //     color: white;
-// //     background-color: black;
-// //     cursor: pointer;
-// //    
-// //   }
-
-// `;
-
+`;
