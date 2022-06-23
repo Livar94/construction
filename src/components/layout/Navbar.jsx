@@ -62,6 +62,7 @@ const NavbarContent = styled.nav`
 const NavLogoContainer = styled.nav`
   overflow: hidden;
   height: 100px;
+  width: 100px;
 `
 
 const NavLogo = styled.img`

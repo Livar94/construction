@@ -84,6 +84,7 @@ const HeroContentBtns = styled.div`
     display: flex;
     gap: .5em;
     margin-top: 1.5em;
+    color: black;
     > button {
         cursor: pointer;
         border-radius: .2em;
