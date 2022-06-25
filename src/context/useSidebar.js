@@ -17,7 +17,7 @@ export function ProvideSidebar({ children }) {
 }
 
 const useProvideSidebar = () => {
-  const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   return {
     isOpen,

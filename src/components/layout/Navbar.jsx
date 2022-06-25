@@ -66,8 +66,8 @@ const NavLogoContainer = styled.nav`
 `
 
 const NavLogo = styled.img`
-  width: 100%;
-  height: 100%;
+max-width: 100%;
+height: 100%;
   object-fit: cover;
 `
 

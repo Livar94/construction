@@ -21,39 +21,13 @@ export default function Services() {
   {serviceTitle:'sod installation and removal', serviceDescription:'hello world', serviceImage:SodImg},
   ]
   return (
-    <>
     <ServicesHeader>
       <h1 className='container'>Services</h1>
       <ServicesContent className='container'>
-      {services.map(service => <ServiceItem serviceTitle={service.serviceTitle} serviceDescription={service.serviceDescription} serviceImage={service.serviceImage} />)}
-        {/* <SwimmingPool>
-          <h3>swimming pool excavation</h3>
-        </SwimmingPool>
-        <BasementWaterproofing>
-          <h3>basement waterproofing</h3>
-
-        </BasementWaterproofing>
-        <AsphaltRemovalExcavation>
-          <h3>asphalt removal excavation</h3>
-        </AsphaltRemovalExcavation>
-        <DrivewayExcavation>
-          <h3>driveway excavation</h3>
-        </DrivewayExcavation>
-        <ConcreteInterlockingPatioExcavation>
-          <h3>concrete interlocking patio excavation</h3>
-        </ConcreteInterlockingPatioExcavation>
-        <InterlockInstallationRemoval>
-          <h3>interlock installation and removal</h3>
-        </InterlockInstallationRemoval>
-        <SodInstallationRemoval>
-          <h3>sod installation and removal</h3>
-        </SodInstallationRemoval> */}
-
+        {services.map(service => <ServiceItem serviceTitle={service.serviceTitle} serviceDescription={service.serviceDescription} serviceImage={service.serviceImage} />)}
         <PatternImg src={Heel} />
       </ServicesContent>
     </ServicesHeader>
-    <ServiceItem />
-    </>
   )
 }
 
@@ -68,7 +42,7 @@ const ServicesHeader = styled.div`
     z-index: 99;
     display: flex;
     justify-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
     @media only screen and (min-width: 768px) {
@@ -96,101 +70,9 @@ const ServicesContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-  > div {
-    position: relative;
-    z-index: 99;
-    padding: 3em 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1em;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 100px 36px -28px inset;
-    cursor: pointer;
-  }
+
   @media only screen and (max-width: 768px) {
 
     grid-template-columns: 1fr;
   }
 `;
-
-const SwimmingPool = styled.div`
-  background-image: url(${SwimmingPoolImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-
-
-  color: white;
-  
-
-
-
-`;
-
-
-const BasementWaterproofing = styled.div`
-  background-image: url(${BasementImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-  color: white;
-
-`;
-
-
-const AsphaltRemovalExcavation = styled.div`
-  background-image: url(${AsphaltImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-  color: white;
-`;
-
-const DrivewayExcavation = styled.div`
-background-image: url(${DriveWayImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-  color: white;
-
-`;
-
-const ConcreteInterlockingPatioExcavation = styled.div`
-  background-image: url(${ConcreteImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-  color: white;
-`;
-
-const InterlockInstallationRemoval = styled.div`
-background-image: url(${InterLockImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-  color: white;
-`;
-
-const SodInstallationRemoval = styled.div`
-background-image: url(${SodImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-
-  color: white;
-
-`;
-

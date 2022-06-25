@@ -6,14 +6,31 @@ import styled from 'styled-components'
 import { bubble as Menu } from 'react-burger-menu'
 import { IoIosClose } from 'react-icons/io';
 import { Link } from 'react-router-dom'
+import { useModel } from '../../context/useModel'
+import { Dialog } from '@headlessui/react'
 
 function Layout({ children }) {
   const { isOpen, setIsOpen } = useSidebar();
+  const { isOpen: isModelOpen, setIsOpen: setIsModelOpen, modelData, setModelData} = useModel();
 
   const closeSidebar = () => setIsOpen(prev => !prev);
 
   return (
     <LayoutContainer>
+          <Dialog open={isModelOpen} onClose={() => setIsModelOpen(false)} >
+        <Dialog.Panel>
+        <Dialog.Title>{modelData?.serviceTitle}</Dialog.Title>
+{/*         <Dialog.Description>
+            This will permanently deactivate your account
+        </Dialog.Description> */}
+
+        <p>
+            {modelData?.serviceDescription}
+        </p>
+
+        <button onClick={() => setIsModelOpen(false)}>Close</button>
+        </Dialog.Panel>
+    </Dialog>
       {isOpen && <MenuContainer>
         <Menu isOpen={isOpen} right styles={{
           bmMenu: {

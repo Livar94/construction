@@ -51,7 +51,7 @@ const Header = styled.div`
 
 const PatternImg = styled.img`
     position: absolute;
-    top: -5rem;
+    top: -50%;
     left: 0;
     width: 100%;
     opacity: .55;
@@ -72,18 +72,19 @@ display: none;
 `
 
 const AboutContent = styled.div`
-    /* display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em; */
+    gap: 1em;
     
-    display: flex;
-    justify-content: center;
+    
     padding: 1em;
     align-items: center;
     
     @media only screen and (max-width: 768px) {
         gap: 3em;
         flex-direction: column;
+        display: flex;
+        justify-content: center;
     }
 `;
 
@@ -110,6 +111,8 @@ const AboutImage = styled.img`
     width: 100%;
     object-fit: cover;
     border-radius: 4em;
+    position: relative;
+    z-index: 99;
     @media only screen and (max-width: 768px) {
         border-radius: 1em;
     }

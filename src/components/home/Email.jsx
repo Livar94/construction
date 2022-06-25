@@ -12,6 +12,7 @@ const Email = () => {
     emailjs.sendForm('service_yaxartf', 'template_9fgw59j', form.current, 'pybKblkW4NXLnR0E9')
       .then((result) => {
           console.log(result.text);
+          e.target.reset();
       }, (error) => {
           console.log(error.text);
       });
