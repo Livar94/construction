@@ -8,47 +8,52 @@ import ConcreteImg from '../../assets/images/DV07X9TXkAEBydj.jpg'
 import InterLockImg from '../../assets/images/images (1).jpg'
 import SodImg from '../../assets/images/rolling-out-sod.jpg'
 import Heel from '../../assets/images/heeel.png'
+import ServiceItem from '../ServiceItem';
 
 
 export default function Services() {
+  const services = [{serviceTitle:'swimming pool excavation', serviceDescription:'hello world', serviceImage:SwimmingPoolImg}, 
+  {serviceTitle:'basement waterproofing', serviceDescription:'hello world', serviceImage:BasementImg},
+  {serviceTitle:'asphalt removal excavation', serviceDescription:'hello world', serviceImage:AsphaltImg},
+  {serviceTitle:'driveway excavation', serviceDescription:'hello world', serviceImage:DriveWayImg},
+  {serviceTitle:'concrete interlocking patio excavation', serviceDescription:'hello world', serviceImage:ConcreteImg},
+  {serviceTitle:'interlock installation and removal', serviceDescription:'hello world', serviceImage:InterLockImg},
+  {serviceTitle:'sod installation and removal', serviceDescription:'hello world', serviceImage:SodImg},
+  ]
   return (
+    <>
     <ServicesHeader>
       <h1 className='container'>Services</h1>
       <ServicesContent className='container'>
-
-        <SwimmingPool>
+      {services.map(service => <ServiceItem serviceTitle={service.serviceTitle} serviceDescription={service.serviceDescription} serviceImage={service.serviceImage} />)}
+        {/* <SwimmingPool>
           <h3>swimming pool excavation</h3>
-          <p>hello world</p>
         </SwimmingPool>
         <BasementWaterproofing>
           <h3>basement waterproofing</h3>
-          <p>hello world</p>
 
         </BasementWaterproofing>
         <AsphaltRemovalExcavation>
           <h3>asphalt removal excavation</h3>
-          <p>hello world</p>
         </AsphaltRemovalExcavation>
         <DrivewayExcavation>
           <h3>driveway excavation</h3>
-          <p>hello world</p>
         </DrivewayExcavation>
         <ConcreteInterlockingPatioExcavation>
           <h3>concrete interlocking patio excavation</h3>
-          <p>hello world</p>
         </ConcreteInterlockingPatioExcavation>
         <InterlockInstallationRemoval>
           <h3>interlock installation and removal</h3>
-          <p>hello world</p>
         </InterlockInstallationRemoval>
         <SodInstallationRemoval>
           <h3>sod installation and removal</h3>
-          <p>hello world</p>
-        </SodInstallationRemoval>
+        </SodInstallationRemoval> */}
 
         <PatternImg src={Heel} />
       </ServicesContent>
     </ServicesHeader>
+    <ServiceItem />
+    </>
   )
 }
 

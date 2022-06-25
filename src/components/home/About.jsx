@@ -91,6 +91,7 @@ const AboutLeft = styled.div`
     > p {
         margin-top: 2em;
         margin-bottom: 2em;
+        font-size: 0.8rem;
     }
 
     position: relative;
@@ -109,7 +110,9 @@ const AboutImage = styled.img`
     width: 100%;
     object-fit: cover;
     border-radius: 4em;
-    
+    @media only screen and (max-width: 768px) {
+        border-radius: 1em;
+    }
 
 
 
