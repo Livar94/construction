@@ -33,8 +33,13 @@ export default function Hero() {
                 /></h1>
                 <p>We specialize in work involving all types of excavation and landscape, including big or small projects.</p>
                 <HeroContentBtns>
-                    <HeroFreeEstimate>Get free Estimate!</HeroFreeEstimate>
-                    <button>About us</button>
+                    <a href="#email">
+                        <HeroFreeEstimate>Get free Estimate!</HeroFreeEstimate>
+                    </a>
+                    <a href="#about">
+                        <button>About us</button>
+                    </a>
+                    
                 </HeroContentBtns>
             </HeroContentText>
         </HeroContent>
@@ -85,7 +90,10 @@ const HeroContentBtns = styled.div`
     gap: .5em;
     margin-top: 1.5em;
     color: black;
-    > button {
+    > a {
+        all: unset;
+    }
+    button {
         cursor: pointer;
         border-radius: .2em;
         padding: 0.75em 1em;
@@ -153,7 +161,7 @@ const HeroContentText = styled.div`
             color: #FCD306;
             letter-spacing: .2em;
             text-decoration: underline;
-            text-decoration-style: wavy;
+            text-decoration-style: dotted;
         }
     }
 

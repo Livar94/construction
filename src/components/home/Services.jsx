@@ -84,7 +84,7 @@ const PatternImg = styled.img`
     width: 100%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    opacity: .3;
+    opacity: .4;
 `
 
 const ServicesContent = styled.div`

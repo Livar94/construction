@@ -18,7 +18,7 @@ const Email = () => {
   };
 
   return (
-    <Header>
+    <Header id='email'>
       <FormEmail className='container'>
         <FormInfo>
           <h2>Contact us</h2>

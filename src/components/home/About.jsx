@@ -6,8 +6,8 @@ import Circle from '../../assets/images/circle.png'
 
 export default function About() {
   return (
-    <Container>
-    <Header>
+    <Container >
+    <Header id='about'>
         <AboutContent className="container">
             
             <AboutLeft>
@@ -51,10 +51,10 @@ const Header = styled.div`
 
 const PatternImg = styled.img`
     position: absolute;
-    top: 0;
+    top: -5rem;
     left: 0;
     width: 100%;
-    opacity: .2;
+    opacity: .55;
 `
 
 const PatternImgTwo = styled.img`
@@ -63,7 +63,7 @@ const PatternImgTwo = styled.img`
     left: 0;
     margin-left: -250px;
     z-index: -1 !important;
-    opacity: .1;
+    opacity: .075;
     width: 1000px;
     @media only screen and (max-width: 768px) {
 

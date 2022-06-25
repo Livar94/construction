@@ -5,9 +5,13 @@ import { useSidebar } from '../../context/useSidebar'
 import styled from 'styled-components'
 import { bubble as Menu } from 'react-burger-menu'
 import { IoIosClose } from 'react-icons/io';
+import { Link } from 'react-router-dom'
 
 function Layout({ children }) {
   const { isOpen, setIsOpen } = useSidebar();
+
+  const closeSidebar = () => setIsOpen(prev => !prev);
+
   return (
     <LayoutContainer>
       {isOpen && <MenuContainer>
@@ -27,13 +31,25 @@ function Layout({ children }) {
           },
           bmItem: {
             display: 'block',
-            color: '#111'
+            color: '#f1f1f1'
           },
         }}>
           <MenuBtn className='crossbtn' onClick={() => setIsOpen(prev => !prev)} ><IoIosClose /></MenuBtn>
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="contact" className="menu-item" href="/contact">Contact</a>
+
+          
+          <MenuLink onClick={closeSidebar}>
+            <Link to="/">Home</Link>
+          </MenuLink>
+          <MenuLink onClick={closeSidebar}>
+            <Link to="/services">Services</Link>
+          </MenuLink>
+          <MenuLink onClick={closeSidebar}>
+            <Link to="/about">About</Link>
+          </MenuLink>
+          <MenuLink onClick={closeSidebar}>
+            <Link to="/contact">Contact</Link>
+          </MenuLink>
+          
         </Menu>
       </MenuContainer>}
       {/* <Navbar /> */}
@@ -62,4 +78,18 @@ const MenuContainer = styled.div`
 const LayoutContainer = styled.div`
   width: 100vw;
   overflow: hidden;
+`
+
+const MenuLink = styled.div`
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: #111;
+    padding: 0.75em 2em;
+    display: block;
+    margin: 1em 0;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+  }
 `
