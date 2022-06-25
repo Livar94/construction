@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Dots from '../../assets/images/dots.png'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Email = () => {
   const form = useRef();
@@ -13,6 +15,15 @@ const Email = () => {
       .then((result) => {
           console.log(result.text);
           e.target.reset();
+          toast("Thank you for your message! We will be in touch with you as soon as possible.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
       }, (error) => {
           console.log(error.text);
       });
@@ -35,6 +46,7 @@ const Email = () => {
         </Form>
       </FormEmail>
       <PatternImg src={Dots} />
+      <ToastContainer />
     </Header>
     
     
