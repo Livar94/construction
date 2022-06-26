@@ -46,7 +46,7 @@ const Header = styled.div`
     background-color: white;
     overflow: hidden;
     position: relative;
-    z-index: 9998 !important;
+    z-index: 9000 !important;
 `;
 
 const PatternImg = styled.img`
