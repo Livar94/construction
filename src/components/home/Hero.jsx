@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navbar from '../layout/Navbar';
-import Zaldo from '../../assets/images/zaldo.jpg'
+/* import Zaldo from '../../assets/images/zaldo.jpg' */
+import Zaldo from '../../assets/videos/pexels-peggy-anke-10009568.mp4'
 import Typewriter from 'typewriter-effect';
 import {ChevronDoubleDownIcon} from '@heroicons/react/outline'
 
@@ -50,7 +51,10 @@ export default function Hero() {
             </HeroIconContainer>
             
         </HeroFooter>
-
+        
+        <Video playsInline autoPlay muted loop>
+            <source src={Zaldo} type="video/mp4" />
+        </Video>
         {/* <HeroImg src={Zaldo} alt="excavator" /> */}
     </HeroContainer>
   )
@@ -58,15 +62,23 @@ export default function Hero() {
 
 const HeroContainer = styled.div`
     height: 100vh;
-    background-image: url(${Zaldo});
+/*     background-image: url(${Zaldo});
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    
+    position: relative;
+    overflow: hidden;
 `;
+
+const Video = styled.video`
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+`
 
 /* const HeroImg = styled.img`
     height: 100%;

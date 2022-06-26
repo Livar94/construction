@@ -50,6 +50,7 @@ const MenuBtn = styled.button`
 
 const NavbarHeader = styled.header`
   padding: 1em 0;
+  background: linear-gradient(#181818, #ffffff10);
 `
 
 const NavbarContent = styled.nav`
