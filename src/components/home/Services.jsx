@@ -53,7 +53,7 @@ const ServicesHeader = styled.div`
   overflow: hidden;
     position: relative;
     background-color: white;
-    z-index: 9998 !important;
+    z-index: 9000 !important;
 `;
 
 const PatternImg = styled.img`
