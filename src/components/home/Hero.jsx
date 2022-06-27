@@ -73,6 +73,7 @@ const HeroContainer = styled.div`
 `;
 
 const Video = styled.video`
+background-color: black;
     z-index: -1;
     position: absolute;
     height: 100vh;
