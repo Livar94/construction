@@ -7,6 +7,8 @@ import { bubble as Menu } from 'react-burger-menu'
 import { IoIosClose } from 'react-icons/io';
 import { Link } from 'react-router-dom'
 import { useModel } from '../../context/useModel'
+import Services from './../../pages/Services';
+import About from './../../pages/About';
 
 function Layout({ children }) {
   const { isOpen, setIsOpen } = useSidebar();
@@ -32,8 +34,8 @@ function Layout({ children }) {
         </Dialog.Panel>
     </Dialog> */}
 
-    {isModelOpen && <div className="dialogContainer" onClick={() => setIsModelOpen(false)}>
-      <div className="dialogContent" onClick={(e) => e.stopPropagation()}>
+    {isModelOpen && <ServicesModel className="dialogContainer" onClick={() => setIsModelOpen(false)}>
+      <ServicesBody className="dialogContent" onClick={(e) => e.stopPropagation()}>
         <header>
           <p>{modelData?.serviceTitle}</p>
           <button onClick={() => setIsModelOpen(false)}>x</button>
@@ -44,8 +46,8 @@ function Layout({ children }) {
         <footer>
           <button onClick={() => setIsModelOpen(false)}>close description</button>
         </footer>
-      </div>
-    </div>}
+      </ServicesBody>
+    </ServicesModel>}
       
 
       {isOpen && <MenuContainer>
@@ -94,6 +96,59 @@ function Layout({ children }) {
 }
 
 export default Layout
+
+
+const ServicesModel = styled.div``;
+
+const ServicesBody = styled.div`
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-color: #ffae00ea !important;
+      color : white;
+      align-items: center;
+  > header  {
+    
+    
+    
+  }
+
+  > header > button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.2em 0.5em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    margin-left: 2em;
+
+
+  }
+
+  > main {
+    padding: 7em;
+
+  }
+
+  > footer > button {
+    padding: 1em 4em;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    :hover{
+      
+    }
+    
+    
+
+
+
+}
+`;
+
+
 
 const MenuBtn = styled.button`
   background: transparent;
