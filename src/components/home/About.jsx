@@ -5,6 +5,12 @@ import Heel from '../../assets/images/heeel.png'
 import Circle from '../../assets/images/circle.png'
 import { useAboutModel } from '../../context/useAboutModel'
 
+import Img1 from '../../assets/images/images.jpg'
+import Img2 from '../../assets/images/Swimming-Pool-Excavation.jpg'
+import Img3 from '../../assets/images/image0.jpeg'
+import Img4 from '../../assets/images/rolling-out-sod.jpg'
+
+
 export default function About() {
     const { isOpen, setIsOpen } = useAboutModel(); 
 
@@ -20,6 +26,10 @@ export default function About() {
             </AboutLeft>
             <AboutRight>
                 {/* <AboutImage src={aboutImg} alt="" /> */}
+                <img src={Img1} alt="" className='img1' />
+                <img src={Img2} alt="" className='img2' />
+                <img src={Img3} alt="" className='img3' />
+                <img src={Img4} alt="" className='img4' />
             </AboutRight>
             
             <PatternImg src={Heel} />
@@ -104,12 +114,60 @@ const AboutLeft = styled.div`
 `;
 
 const AboutRight = styled.div`
-    overflow: hidden;
+/*     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
     /* new code */
 
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: center;
+
+    img {
+        border-radius: 0.375rem;
+        animation: beat .9s infinite alternate;
+    }
+
+
+            
     
+
+  transform-origin: center;
+
+
+
+
+
+  @keyframes beat{
+
+    to { transform: scale(1.05); }
+
+    }
+
+    .img1 {
+        width: 25%;
+        align-self: flex-end;
+        justify-self: end;
+    }
+
+    .img2 {
+        width: 50%;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .img3 {
+        width: 80%;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        justify-self: end;
+    }
+
+    .img4 {
+        width: 33.333333%;
+        align-self: flex-start;
+    }
+
 `;
 
 const AboutImage = styled.img`
