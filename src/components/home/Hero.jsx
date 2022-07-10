@@ -38,7 +38,7 @@ export default function Hero() {
                         <HeroFreeEstimate>Get free Estimate!</HeroFreeEstimate>
                     </a>
                     <a href="#about">
-                        <button>About us</button>
+                        <button id='aboutusbtn'>About us</button>
                     </a>
                     
                 </HeroContentBtns>
@@ -101,10 +101,13 @@ const HeroFooter = styled.div`
 const HeroContentBtns = styled.div`
     display: flex;
     gap: .5em;
+    align-items: stretch;
     margin-top: 1.5em;
     color: black;
     > a {
+        color: black;
         all: unset;
+        display: inline-block;
     }
     button {
         cursor: pointer;
@@ -113,12 +116,25 @@ const HeroContentBtns = styled.div`
         border: none;
         font-weight: 600;
         font-size: 1rem;
+        height: 100%;
+    }
+    #aboutusbtn {
+        :hover {
+            background-color: #111;
+            color: whitesmoke;
+            transition: all .5s ease-out;
+        }
     }
 `
 
 const HeroFreeEstimate = styled.button`
     font-family: 'Kaushan Script', cursive;
     background-color: #FCD306;
+    :hover {
+        background-color: #111;
+        color: #FCD306;
+        transition: all .5s ease-out;
+    }
 `
 
 const HeroIconContainer = styled.div`
@@ -171,7 +187,7 @@ const HeroContentText = styled.div`
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1rem;
-            color: #FCD306;
+            color: #111;
             letter-spacing: .2em;
             text-decoration: underline;
             text-decoration-style: dotted;

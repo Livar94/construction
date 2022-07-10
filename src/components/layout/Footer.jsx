@@ -81,5 +81,8 @@ gap: 1em;
   a {
     color: white;
     text-decoration: none;
+    :hover {
+      color: grey;
+    }
   }
 `

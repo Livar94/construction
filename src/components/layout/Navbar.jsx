@@ -17,9 +17,12 @@ export default function Navbar() {
 
 
         <NavLinks>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+
+          <li><a href="#about">About</a></li>
+
+          <li><a href="#services">Services</a></li>
+          
+          <li><a href="#email">Contact</a></li>
         </NavLinks>
         
         <MenuBtn onClick={() => setIsOpen(prev => !prev)}>
@@ -86,6 +89,12 @@ const NavLinks = styled.ul`
 
     display: none;
 }
+
+  > li {
+    a:hover {
+      color: black !important;
+    }
+  }
 `
 
 

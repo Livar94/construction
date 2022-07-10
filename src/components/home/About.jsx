@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import aboutImg from '../../assets/images/image0.jpeg'
 import Heel from '../../assets/images/heeel.png'
 import Circle from '../../assets/images/circle.png'
+import { useAboutModel } from '../../context/useAboutModel'
 
 export default function About() {
+    const { isOpen, setIsOpen } = useAboutModel(); 
+
   return (
     <Container >
     <Header id='about'>
@@ -13,10 +16,10 @@ export default function About() {
             <AboutLeft>
                 <h2>About</h2>
                 <p>CI Landscape and Excavation is a family owned business with over 25 years of experience. <br /> We specialize in work involving all types of excavation and landscape, including big or small projects. <br />Our main priority is to provide our customers with high quality work and satisfaction.</p>
-                <Button>Read more</Button>
+                <Button onClick={() => setIsOpen(true)}>Read more</Button>
             </AboutLeft>
             <AboutRight>
-                <AboutImage src={aboutImg} alt="" />
+                {/* <AboutImage src={aboutImg} alt="" /> */}
             </AboutRight>
             
             <PatternImg src={Heel} />
@@ -104,6 +107,9 @@ const AboutRight = styled.div`
     overflow: hidden;
     display: flex;
     justify-content: center;
+    /* new code */
+
+    
 `;
 
 const AboutImage = styled.img`

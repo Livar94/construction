@@ -12,7 +12,7 @@ export default function SocialMedia() {
     <SMContainer>
         <SMContent className="container">
             {/*  */}
-            <SMContentItem href='https://www.instagram.com/landscapeexcavation/'>
+            <SMContentItem href='https://www.instagram.com/cilandscapeexcavation/'>
                 <SMContentItemImg>
                     <RiInstagramFill />
                 </SMContentItemImg>
@@ -45,12 +45,13 @@ export default function SocialMedia() {
 
 const SMContainer = styled.div`
     background-color: #111111;
-    padding: 3em 0;
+    padding: 1em 0;
 `
 const SMContent = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
+    gap: 1rem;
     @media only screen and (max-width: 768px) {
         gap: 4em;
         grid-template-columns: 1fr;
@@ -62,8 +63,33 @@ const SMContentItem = styled.a`
     justify-content: center;
     align-items: center;
     color: white !important;
+    background-color: #202020;
+    :hover {
+        transition: all .5s;
+        background-color: #2e2e2e;
+    }
+    border-radius: 2em;
+    padding: 2rem 0;
+    
+        svg {
+            animation: beat .40s infinite alternate;
+        }
+    
+
+  transform-origin: center;
+
+
+
+
+
+  @keyframes beat{
+
+    to { transform: scale(1.1); }
+
+    }
 `
 const SMContentItemImg = styled.div`
+
     svg {
         font-size: 3rem;
     }

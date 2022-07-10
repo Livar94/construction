@@ -9,9 +9,11 @@ import { Link } from 'react-router-dom'
 import { useModel } from '../../context/useModel'
 import Services from './../../pages/Services';
 import About from './../../pages/About';
+import { useAboutModel } from '../../context/useAboutModel'
 
 function Layout({ children }) {
   const { isOpen, setIsOpen } = useSidebar();
+  const { isOpen: isAboutModelOpen, setIsOpen: setIsAboutModelOpen } = useAboutModel();
   const { isOpen: isModelOpen, setIsOpen: setIsModelOpen, modelData, setModelData} = useModel();
 
   const closeSidebar = () => setIsOpen(prev => !prev);
@@ -33,6 +35,21 @@ function Layout({ children }) {
         <button onClick={() => setIsModelOpen(false)}>Close</button>
         </Dialog.Panel>
     </Dialog> */}
+
+    {isAboutModelOpen && <ServicesModel className="dialogContainer" onClick={() => setIsAboutModelOpen(false)}>
+      <ServicesBody className="dialogContent" onClick={(e) => e.stopPropagation()}>
+        <header>
+          <p>{modelData?.serviceTitle}</p>
+          <button onClick={() => setIsAboutModelOpen(false)}>x</button>
+        </header>
+        <main>
+          <p>{modelData?.serviceDescription}</p>
+        </main>
+        <footer>
+          <button onClick={() => setIsAboutModelOpen(false)}>close description</button>
+        </footer>
+      </ServicesBody>
+    </ServicesModel>}
 
     {isModelOpen && <ServicesModel className="dialogContainer" onClick={() => setIsModelOpen(false)}>
       <ServicesBody className="dialogContent" onClick={(e) => e.stopPropagation()}>

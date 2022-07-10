@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import SwimmingPoolImg from '../../assets/images/Prepare+Your+Landscape+for+a+Swimming+Pool+with+Rock+Excavation+in+Croton-on-Hudson+NY.jpeg'
+import SwimmingPoolImg from '../../assets/images/Swimming-Pool-Excavation.jpg'
 import BasementImg from '../../assets/images/Basement-Waterproofing-300x300.jpg'
 import AsphaltImg from '../../assets/images/DSC00613.jpg'
 import DriveWayImg from '../../assets/images/images.jpg'
@@ -21,7 +21,7 @@ export default function Services() {
   {serviceTitle:'sod installation and removal', serviceDescription:'hello world', serviceImage:SodImg},
   ]
   return (
-    <ServicesHeader>
+    <ServicesHeader id='services'>
       <h1 className='container'>Services</h1>
       <ServicesContent className='container'>
         {services.map(service => <ServiceItem serviceTitle={service.serviceTitle} serviceDescription={service.serviceDescription} serviceImage={service.serviceImage} />)}
