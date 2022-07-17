@@ -109,13 +109,13 @@ function Layout({ children }) {
             <Link to="/">Home</Link>
           </MenuLink>
           <MenuLink onClick={closeSidebar}>
-            <Link to="/services">Services</Link>
+            <a href="#services">Services</a>
           </MenuLink>
           <MenuLink onClick={closeSidebar}>
-            <Link to="/about">About</Link>
+            <a href="#about">About</a>
           </MenuLink>
           <MenuLink onClick={closeSidebar}>
-            <Link to="/contact">Contact</Link>
+            <a href="#email">Contact</a>
           </MenuLink>
           
         </Menu>
