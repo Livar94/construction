@@ -10,6 +10,12 @@ import { useModel } from '../../context/useModel'
 import Services from './../../pages/Services';
 import About from './../../pages/About';
 import { useAboutModel } from '../../context/useAboutModel'
+import ImageOne from '../../assets/images/DSC00613.jpg'
+import ImageTwo from '../../assets/images/DSC00613.jpg'
+import ImageThree from '../../assets/images/DSC00613.jpg'
+import ImageFour from '../../assets/images/DSC00613.jpg'
+import ImageFive from '../../assets/images/DSC00613.jpg'
+import ImageSix from '../../assets/images/DSC00613.jpg'
 
 function Layout({ children }) {
   const { isOpen, setIsOpen } = useSidebar();
@@ -37,18 +43,27 @@ function Layout({ children }) {
     </Dialog> */}
 
     {isAboutModelOpen && <ServicesModel className="dialogContainer" onClick={() => setIsAboutModelOpen(false)}>
-      <ServicesBody className="dialogContent" onClick={(e) => e.stopPropagation()}>
+      <ServicesBodyAbout className="dialogContent" onClick={(e) => e.stopPropagation()}>
         <header>
-          <p>{modelData?.serviceTitle}</p>
+          <p>About us</p>
           <button onClick={() => setIsAboutModelOpen(false)}>x</button>
         </header>
         <main>
-          <p>{modelData?.serviceDescription}</p>
+          <p>about us</p>
+          <div className='imgs' onScroll={(e) => e.stopPropagation()}>
+            <img src={ImageOne} alt="" />
+            <img src={ImageTwo} alt="" />
+            <img src={ImageThree} alt="" />
+            <img src={ImageFour} alt="" />
+            <img src={ImageFive} alt="" />
+            <img src={ImageSix} alt="" />
+
+          </div>
         </main>
         <footer>
           <button onClick={() => setIsAboutModelOpen(false)}>close description</button>
         </footer>
-      </ServicesBody>
+      </ServicesBodyAbout>
     </ServicesModel>}
 
     {isModelOpen && <ServicesModel className="dialogContainer" onClick={() => setIsModelOpen(false)}>
@@ -145,6 +160,75 @@ const ServicesBody = styled.div`
   > main {
     padding: 7em;
 
+  }
+
+  > footer > button {
+    padding: 1em 4em;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    :hover{
+      
+    }
+    
+    
+
+
+
+}
+`;
+const ServicesBodyAbout = styled.div`
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-color: #ffae00ea !important;
+      color : white;
+      align-items: center;
+
+  > header  {
+    
+    
+    
+  }
+
+  > header > button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.2em 0.5em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    margin-left: 2em;
+
+
+  }
+
+  > main {
+    overflow: hidden;
+    overflow-y: scroll;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+
+    /* padding: 7em; */
+    .imgs {
+      background-color: #1111110;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      img {
+        max-width: 100%;
+      }
+    }
   }
 
   > footer > button {
