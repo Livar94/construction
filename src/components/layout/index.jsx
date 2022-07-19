@@ -49,7 +49,7 @@ function Layout({ children }) {
           <button onClick={() => setIsAboutModelOpen(false)}>x</button>
         </header>
         <main>
-          <p>about us</p>
+          {/* <p>about us</p> */}
           <div className='imgs' onScroll={(e) => e.stopPropagation()}>
             <img src={ImageOne} alt="" />
             <img src={ImageTwo} alt="" />
@@ -130,7 +130,10 @@ function Layout({ children }) {
 export default Layout
 
 
-const ServicesModel = styled.div``;
+const ServicesModel = styled.div`
+width: 100%;
+
+`;
 
 const ServicesBody = styled.div`
       position: absolute;
@@ -181,10 +184,11 @@ const ServicesBody = styled.div`
 `;
 const ServicesBodyAbout = styled.div`
       position: absolute;
-      width: 50%;
+      width: 100%;
+      max-width: 900px !important;
       height: 50%;
-      background-color: #ffae00ea !important;
-      color : white;
+      background-color: #f5f5f5ea !important;
+      color : #272727;
       align-items: center;
 
   > header  {
@@ -223,9 +227,13 @@ const ServicesBodyAbout = styled.div`
     .imgs {
       background-color: #1111110;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1em;
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
       img {
+        border-radius: 1em;
         max-width: 100%;
       }
     }
