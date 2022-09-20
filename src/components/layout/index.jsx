@@ -91,7 +91,7 @@ function Layout({ children }) {
             
           },
           bmMorphShape: {
-            fill: '#FCD306'
+            fill: '#FCD306' 
           },
           bmItemList: {
             color: '#b8b7ad',
@@ -139,8 +139,9 @@ const ServicesBody = styled.div`
       position: absolute;
       width: 50%;
       height: 50%;
-      background-color: #ffae00ea !important;
-      color : white;
+      background-color: #c0c0c0ea !important;
+      color : black;
+      font-weight: bold;
       align-items: center;
   > header  {
     

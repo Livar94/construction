@@ -12,13 +12,13 @@ import ServiceItem from '../ServiceItem';
 
 
 export default function Services() {
-  const services = [{serviceTitle:'swimming pool excavation', serviceDescription:'hello world', serviceImage:SwimmingPoolImg}, 
-  {serviceTitle:'basement waterproofing', serviceDescription:'hello world', serviceImage:BasementImg},
-  {serviceTitle:'asphalt removal excavation', serviceDescription:'hello world', serviceImage:AsphaltImg},
-  {serviceTitle:'driveway excavation', serviceDescription:'hello world', serviceImage:DriveWayImg},
-  {serviceTitle:'concrete interlocking patio excavation', serviceDescription:'hello world', serviceImage:ConcreteImg},
-  {serviceTitle:'interlock installation and removal', serviceDescription:'hello world', serviceImage:InterLockImg},
-  {serviceTitle:'sod installation and removal', serviceDescription:'hello world', serviceImage:SodImg},
+  const services = [{serviceTitle:'swimming pool excavation', serviceDescription:'', serviceImage:SwimmingPoolImg}, 
+  {serviceTitle:'basement waterproofing', serviceDescription:'', serviceImage:BasementImg},
+  {serviceTitle:'asphalt removal excavation', serviceDescription:'', serviceImage:AsphaltImg},
+  {serviceTitle:'driveway excavation', serviceDescription:'', serviceImage:DriveWayImg},
+  {serviceTitle:'concrete interlocking patio excavation', serviceDescription:'', serviceImage:ConcreteImg},
+  {serviceTitle:'interlock installation and removal', serviceDescription:'', serviceImage:InterLockImg},
+  {serviceTitle:'sod installation and removal', serviceDescription:'', serviceImage:SodImg},
   ]
   return (
     <ServicesHeader id='services'>
