@@ -83,7 +83,7 @@ function Layout({ children }) {
       
 
       {isOpen && <MenuContainer>
-        <Menu isOpen={isOpen} right styles={{
+        <Menu isOpen={isOpen} onClose={ () => setIsOpen(false) } right styles={{
           bmMenu: {
             background: '#FCD306',
             padding: '2.5em 1.5em 0',
